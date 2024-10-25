@@ -115,10 +115,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            const Text('Collect words',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50)),
+            //const Text('Collect words',
+            //    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50)),
             TextField(
               controller: myController,
               decoration: const InputDecoration(hintText: "Type a word"),
@@ -144,7 +144,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                   child: const Text('Show')),
-              const Spacer(),
+            ]),
+            Row(children: <Widget>[
               IconButton(
                 icon: const Icon(Icons.save),
                 onPressed: () {
